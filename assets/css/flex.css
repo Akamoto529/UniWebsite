@@ -1,0 +1,96 @@
+.flexbox{
+    display: flex;
+    border: 1px solid black;
+}
+.flexelem {
+    width: 200px;
+    height: 200px;
+    background: url("../img/flex/frog1.png");
+    background-size: contain;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin:20px 20px 20px 20px;
+}
+.flexelem:active {
+    animation: rotate 5s infinite;
+}
+@keyframes rotate {
+    0%, 100%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(45deg);
+    }
+    75% {
+        transform: rotate(-45deg);
+    }
+}
+
+.frog {
+    width: 100%;
+    height: 100%;
+    background: url("../img/flex/frog3.png");
+    background-size: contain;
+    position:absolute;
+    display: none;
+    right:15%;
+}
+.flexelem:hover .frog {
+    display: block;
+    animation: move 5s;
+}
+@keyframes move {
+    0%{
+        right:0%;
+    }
+    100% {
+        right:15%;
+    }
+}
+.flexelem:active .frog {
+    animation: none;
+    display: none;
+}
+
+.princess {
+    width: 100%;
+    height: 100%;
+    background: url("../img/flex/frog2.png");
+    background-size: contain;
+    position: absolute;
+    transform-origin: bottom;
+
+    display: none;
+}
+.flexelem:active .princess {
+    display: block;
+    animation: zoom 5s;
+}
+@keyframes zoom {
+    0%{
+        transform: scale(0.2);
+    }
+    100% {
+        transform: scale(1)
+    }
+}
+
+.flexelem:hover::before {
+    content: "Ты Кто?";
+    color: green;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    right: 0%;
+}
+.flexelem:active::before {    content: "Принцесса";
+    color: green;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    right: 0%;
+}
+
+
+

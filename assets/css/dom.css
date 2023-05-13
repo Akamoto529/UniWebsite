@@ -1,0 +1,16 @@
+table{   
+    margin:auto;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+.even{ 
+    background-color: #fbd4b4;
+}
+.odd{
+    background-color: #ccc0d9;
+}
+.bold{
+    font-weight: bold;
+}
