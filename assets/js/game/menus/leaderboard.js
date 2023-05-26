@@ -13,7 +13,7 @@ export default class Leaderboard extends Menu{
             return new MainMenu(canvas)
         });
         buttons[1] = new Button(new Vector(canvas.width/2 - canvas.width/18,canvas.height*14/15), new Vector(canvas.width/10,canvas.height/15),"Clear", ()=>{
-            return new Leaderboard(canvas, -1);
+            localStorage.clear();
         });
         super(canvas, buttons, texts);
         this.score = score;
