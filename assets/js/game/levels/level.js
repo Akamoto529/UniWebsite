@@ -31,6 +31,7 @@ export default class Level extends CanvasObject{
         let elem_id = this.grid.handleClick(pos);
         if(elem_id == this.elem_id){
             this.levelPanel.score+= Math.max(1,(Math.floor(this.elem_cnt/5) + Math.floor(this.elem_size/2) + Math.floor(this.color_cnt/3)))*this.scoreMultiplier;
+            this.levelPanel.time+=5;
             if(this.levelPanel.score%5 == 0) this.elem_cnt++;
             if(this.levelPanel.score%10 == 0) this.color_cnt++;
             if(this.levelPanel.score%20 == 0) this.elem_size++;
